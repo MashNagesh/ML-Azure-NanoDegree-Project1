@@ -28,7 +28,14 @@ This is conservative policy but provides a lot of savings in terms of time and c
 
 ## AutoML
 The AutoML model will search on a series of models and check for the best primary metric in our case  -Accuracy.
-The Parameters chosen are  - Early stopping, Timeout of 30 minutes, Cross Validation and local instance for training.
+
+**Architecture:**
+The Parameters chosen are  - 
+* Early stopping - True. Early stopping is enabled after 20 iterations and if there are no improvements to the score.Most useful when timeout is not mentioned.
+Timeout of 30 minutes - default is 6 days.Hence advisable to mention to avoid compute costs.
+* Cross Validation - n_cross_validations = 5.Five folds for cross-validation are defined. Hence, five different trainings, each training using 4/5 of the data, and each validation using 1/5 of the data with a different holdout fold each time.As a result, metrics are calculated with the average of the five validation metrics.
+* Compute Instance  - Using the Local instance to pass the Dataframe as is
+* Primary Metric - Accuracy. The metric to be used during model training for optimization
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
