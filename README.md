@@ -23,8 +23,8 @@ The parameter sampler chosen for this project is <b> Random Parameter Sampler </
 Random Parameters are chosen to arrive at a quicker solution which might also be closest to the optimal solution as opposed to Grid search where it might not be possible to arrive at an optimal solution if those parameters are not part of the sampling grid which renders grid search as an inefficient method as compared to Random Parameter Sampling.
 
 **What are the benefits of the early stopping policy you chose?**
-The Stopping policy chosen for this project is **Median Stopping Policy**.
-This is conservating policy but provides a lot of savings interms of time and cost without compromising heavily on the best performance.
+The Stopping policy chosen for this project is **Median Stopping Policy**.The policy terminates runs whose average performances are below the median performance.
+This is conservative policy but provides a lot of savings in terms of time and cost without compromising heavily on the best performance.
 
 ## AutoML
 The AutoML model will search on a series of models and check for the best primary metric in our case  -Accuracy.
